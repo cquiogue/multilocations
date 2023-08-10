@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet" />
+    <title>Multiple Locations Organizer</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Multiple Locations Organizer</h1>
+      <p>
+        <b>
+          Ctrl+Y and select everything from the material# to batch# on Return
+        </b>
+      </p>
+      <textarea id="input-text" rows="10" cols="50"></textarea>
+      <br />
+      <br />
+      <label for="storage-input"><b>Storage Location:</b></label>
+      <select id="storage-input" name="storage-input">
+        <option value="CON1">CON1</option>
+        <option value="CON2">CON2</option>
+        <option value="CON3">CON3</option>
+        <option value="CON4">CON4</option>
+        <option value="CON5">CON5</option>
+        <option value="CON6">CON6</option>
+        <option value="CON7">CON7</option>
+        <option value="CON8" selected>CON8</option>
+        <option value="CON9">CON9</option>
+      </select>
+      <br />
+      <div id="button-container">
+        <button onclick="generateTable()">Generate Table</button>
+        <button id="clear-button" onclick="clearInputs()">Clear</button>
+      </div>
+      <div id="table-container"></div>
+      <hr />
+      <div id="output-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
