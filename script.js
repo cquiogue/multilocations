@@ -202,8 +202,14 @@ function combineAndTallyThirdTableData(tableData) {
       combinedData[key][1] =
         (parseInt(combinedData[key][1]) || 0) + (parseInt(rowData[1]) || 0); // Tally second column values
 
-      // Set column 10 to an empty string for the combined row
-      combinedData[key][9] = '';
+      // Check if the column 10 values match
+      if (combinedData[key][9] === rowData[9]) {
+        // Set column 10 to the matched value for the combined row
+        combinedData[key][9] = rowData[9];
+      } else {
+        // Set column 10 to an empty string for the combined row
+        combinedData[key][9] = '\u00A0';
+      }
     }
   }
 
